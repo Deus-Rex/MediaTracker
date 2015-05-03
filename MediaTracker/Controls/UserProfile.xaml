@@ -1,0 +1,157 @@
+﻿<UserControl x:Class="MediaTracker.UserProfile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Width="375.758"
+             Height="auto"
+             mc:Ignorable="d">
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BtnBack"
+                Grid.Column="1"
+                Width="32"
+                MinWidth="32"
+                MinHeight="32"
+                MaxWidth="32"
+                MaxHeight="32"
+                Margin="0"
+                HorizontalAlignment="Left"
+                Click="BtnBack_Click">
+            <StackPanel>
+                <Image x:Name="ImgBack"
+                       Width="21"
+                       Height="20"
+                       Source="/MediaTracker;component/Resources/back.png" />
+            </StackPanel>
+        </Button>
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               Content="Username:" />
+        <Label x:Name="LblUsername"
+               Grid.Row="2"
+               Grid.Column="2"
+               Content="Label" />
+        <Label Grid.Row="3"
+               Grid.Column="1"
+               Content="Date Registered:" />
+        <Label x:Name="LblDateRegistered"
+               Grid.Row="3"
+               Grid.Column="2"
+               Content="Label"
+               RenderTransformOrigin="0.5,0.5" />
+        <Label Grid.Row="4"
+               Grid.Column="1"
+               Content="stats:" />
+        <Label x:Name="LblStatMovie"
+               Grid.Row="4"
+               Grid.Column="2"
+               Content="Label" />
+        <Label x:Name="LblStatSeries"
+               Grid.Row="5"
+               Grid.Column="2"
+               Content="Label" />
+        <Label x:Name="LblStatBook"
+               Grid.Row="6"
+               Grid.Column="2"
+               Content="Label" />
+        <Button x:Name="BtnLogout"
+                Grid.Row="7"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Margin="5"
+                Click="BtnLogout_Click"
+                Content="Logout" />
+        <!--  Control that when clicked, expands to reveal more content  -->
+        <Expander Name="ExpanderShowMediaButtons"
+                  Grid.Row="8"
+                  Grid.RowSpan="2"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="2"
+                  MinWidth="300"
+                  Header="Show Users Media">
+            <Grid Background="{x:Null}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <Label Margin="5,5,0,0" Content="Movie" />
+                    <Button Name="MovieOngoing"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Ongoing" />
+                    <Button Name="MovieComplete"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Complete" />
+                    <Button Name="MoviePlanned"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Planned" />
+                    <Button Name="MovieDropped"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Dropped" />
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Margin="5,5,0,0" Content="TV" />
+                    <Button Name="SeriesOngoing"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Ongoing" />
+                    <Button Name="SeriesComplete"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Complete" />
+                    <Button Name="SeriesPlanned"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Planned" />
+                    <Button Name="SeriesDropped"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Dropped" />
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <Label Margin="5,5,0,0" Content="Book" />
+                    <Button Name="BookOngoing"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Ongoing" />
+                    <Button Name="BookComplete"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Complete" />
+                    <Button Name="BookPlanned"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Planned" />
+                    <Button Name="BookDropped"
+                            Margin="5,5,0,0"
+                            Click="MediaButton_OnClick"
+                            Content="Dropped" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+    </Grid>
+</UserControl>

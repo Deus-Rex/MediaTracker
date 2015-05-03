@@ -1,0 +1,6 @@
+<StyleCopSettings Version="105">
+  <GlobalSettings>
+    <BooleanProperty Name="WriteCache">False</BooleanProperty>
+    <StringProperty Name="Culture">en-GB</StringProperty>
+  </GlobalSettings>
+</StyleCopSettings>
